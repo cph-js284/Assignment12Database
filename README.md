@@ -56,3 +56,10 @@ MERGE (a:tweet{
                 })
 return a
 ```
+```
+MATCH (a:tweet) 
+unwind a.mentions as handle
+with distinct handle
+create (b:tweeters{handle: handle})
+
+```
