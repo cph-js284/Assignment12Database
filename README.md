@@ -63,3 +63,11 @@ with distinct handle
 create (b:tweeters{handle: handle})
 
 ```
+
+
+```
+
+match (b:tweeters), (a:tweet)
+where b.handle in a.mentions 
+create (tweeters)-[:MENTIONS]->(tweet)
+```
