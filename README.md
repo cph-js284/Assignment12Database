@@ -58,16 +58,16 @@ return a
 ```
 ```
 MATCH (a:tweet) 
-unwind a.mentions as handle
-with distinct handle
-create (b:tweeters{handle: handle})
+UNWIND a.mentions AS handle
+WITH DISTINCT handle
+CREATE (b:tweeters {handle: handle})
 
 ```
 
 
 ```
 
-match (b:tweeters), (a:tweet)
-where b.handle in a.mentions 
-create (tweeters)-[:MENTIONS]->(tweet)
+MATCH (b:tweeters), (a:tweet)
+WHERE b.handle in a.mentions 
+CREATE (tweeters)-[:MENTIONS]->(tweet)
 ```
