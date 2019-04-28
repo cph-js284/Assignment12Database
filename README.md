@@ -17,7 +17,8 @@ sudo docker run -d --name neo4j --rm --publish=7474:7474 --publish=7687:7687 -v 
 3) Launch the Neo4j IDE [http://localhost:7474/browser](http://localhost:7474/browser) <br>
 *you might need to give it a few seconds to spin up before connecting*<br>
 <br>
-4) Enter credentials
+4) Enter credentials<br>
+
 ```
 username : neo4j
 password: test1234
