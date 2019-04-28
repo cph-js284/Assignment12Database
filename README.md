@@ -2,7 +2,7 @@
 This is the 12th. assignment for PBA database soft2019spring
 
 # What it is 
-This is a repo containing asingle markdown, that holds the answers for the [assignment 12](https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md) <br>
+This is a repo containing a single markdown, that holds the answers for the [assignment 12](https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md) <br>
 
 # Setup
 1) Download the zip file and unpack the zip-file
