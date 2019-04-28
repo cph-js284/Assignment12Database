@@ -62,6 +62,11 @@ UNWIND a.mentions AS handle
 WITH DISTINCT handle
 CREATE (b:tweeters {handle: handle})
 ```
+<br>
+<b>Result</b>
+```
+Added 22913 labels, created 22913 nodes, set 22913 properties, completed after 1480 ms.
+```
 
 *Create a relation "Tweeted" between Tweeters and Tweet.*
 ```
@@ -69,10 +74,15 @@ MATCH (b:tweeters), (a:tweet)
 WHERE b.handle in a.mentions 
 CREATE (tweeters)-[:MENTIONS]->(tweet)
 ```
+<b>NB the above cipher will take several seconds(again) depending on your hardware</b><br>
+<br>
+<b>Result</b>
+```
+
+```
 
 # Excercise 3
 *Find the top 10 list of tweeters whose tweets are the furtherst apart.*<br>
-*Having forced 0.0 in for some of the Longitudes in Ex1 is coming back to bit me (maybe - some tweets could be sent from further away), now where I have to use the point-function*
 ```
 MATCH (a:tweet),(b:tweet)
 WHERE a.username = b.username and a <> b
