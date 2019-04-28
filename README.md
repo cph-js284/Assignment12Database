@@ -5,19 +5,19 @@ This is the 12th. assignment for PBA database soft2019spring
 This is a repo containing a single markdown, that holds the answers for the [assignment 12](https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md) <br>
 
 # Setup
-1) Download and unpack the zip-file
+1. Download and unpack the zip-file
 ```
 wget https://github.com/datsoftlyngby/soft2019spring-databases/raw/master/data/some2016UKgeotweets.csv.zip
 unzip some2016UKgeotweets.csv.zip
 ```
-2) Start up and Neo4j container, execute this command from the folder containing the .csv-file
+2. Start up and Neo4j container, execute this command from the folder containing the .csv-file
 ```
 sudo docker run -d --name neo4j --rm --publish=7474:7474 --publish=7687:7687 -v $(pwd):/var/lib/neo4j/import --env NEO4J_AUTH=neo4j/test1234 neo4j
 ```
-3) Launch the Neo4j IDE [http://localhost:7474/browser](http://localhost:7474/browser) <br>
+3. Launch the Neo4j IDE [http://localhost:7474/browser](http://localhost:7474/browser) <br>
 *you might need to give it a few seconds to spin up before connecting*<br>
-<br>
-4) Enter credentials<br>
+
+4. Enter credentials<br>
 
 ```
 username : neo4j
