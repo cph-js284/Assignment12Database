@@ -74,20 +74,38 @@ MATCH (b:tweeters), (a:tweet)
 WHERE b.handle in a.mentions 
 CREATE (tweeters)-[:MENTIONS]->(tweet)
 ```
-<b>NB the above cipher will take several seconds(again) depending on your hardware</b><br>
+<b>NB the above cipher will take several minutes(112 on my laptop so yeah :s) depending on your hardware</b><br>
 <br>
 <b>Result</b>
 ```
-
+Created 81880 nodes, created 40940 relationships, completed after 6708501 ms.
 ```
 
 # Excercise 3
 *Find the top 10 list of tweeters whose tweets are the furtherst apart.*<br>
 ```
-MATCH (a:tweet),(b:tweet)
-WHERE a.username = b.username and a <> b
-WITH DISTANCE(POINT({long:a.long, latt:a.latt}), POINT({long:b.long, latt:b.latt})) as dist, a, b
-ORDER BY dist DESC
-RETURN a.username, dist as dist_in_mtrs
+MATCH (a:tweet), (b:tweet) 
+WHERE a.username = b.username AND a <> b
+WITH distance(point({longitude:a.long, latitude:a.latt}), point({longitude:b.long, latitude:b.latt})) as dist, a, b
+RETURN DISTINCT a.nickname, max(dist) as distance
+ORDER BY distance DESC
 LIMIT 10
 ```
+<b>Result</b>
+```
+a.nickname		distance
+
+"v1vekv"		null
+"Keith_Rapley"		null
+"v1_scope"		null
+"googuns_lulz"		1287687.6134860725
+"tmj_GBR_mgmt"		1101277.6468134406
+"outonashout"		1030581.425638201
+"MarsBots"		975157.1836022508
+"x333xxx"		933365.4495465886
+"TangoRaindrop"		893949.2533669937
+"FoodTouristBlog"	893949.2533669937
+
+Started streaming 10 records after 199500 ms and completed after 199500 ms.
+```
+**
