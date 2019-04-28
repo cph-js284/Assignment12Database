@@ -10,7 +10,7 @@ This is a repo containing a single markdown, that holds the answers for the [ass
 wget https://github.com/datsoftlyngby/soft2019spring-databases/raw/master/data/some2016UKgeotweets.csv.zip
 unzip some2016UKgeotweets.csv.zip
 ```
-2) Start up and Neo4j container
+2) Start up and Neo4j container, execute this command from the folder containing the .csv-file
 ```
 sudo docker run -d --name neo4j --rm --publish=7474:7474 --publish=7687:7687 -v $(pwd):/var/lib/neo4j/import --env NEO4J_AUTH=neo4j/test1234 neo4j
 ```
