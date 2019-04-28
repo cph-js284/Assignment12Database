@@ -12,7 +12,7 @@ unzip some2016UKgeotweets.csv.zip
 ```
 2) Start up and Neo4j container
 ```
-sudo docker run -d --name neo4j --rm --publish=7474:7474 --publish=7687:7687 --env NEO4J_AUTH=neo4j/test1234 neo4j
+sudo docker run -d --name neo4j --rm --publish=7474:7474 --publish=7687:7687 -v $(pwd):/var/lib/neo4j/import --env NEO4J_AUTH=neo4j/test1234 neo4j
 ```
 3) Launch the Neo4j IDE [http://localhost:7474/browser](http://localhost:7474/browser) <br>
 *you might need to give it a few seconds to spin up before connecting*<br>
