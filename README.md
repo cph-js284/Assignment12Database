@@ -33,12 +33,12 @@ USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row  FIELDTERMINATOR ";"
 WITH row
 WHERE NOT row.Longitude IS NULL
-MERGE (a:tweet{
+CREATE (a:tweet{
 	username:row.`User Name`,
     	nickname:row.Nickname,
     	place:row.`Place (as appears on Bio)`,
     	latt:toFloat(row.Latitude),
-    	long:coalesce(toFloat(row.Longitude),0.0),
+    	long:toFloat(row.Longitude),
     	text:row.`Tweet content`,
     	mentions:(extract( m in 
                 filter(m in split(row.`Tweet content`," ") where m starts with "@" and size(m) > 1) 
