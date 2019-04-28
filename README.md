@@ -45,7 +45,8 @@ MERGE (a:tweet{
                 | right(m,size(m)-1)))
                 })
 ```
-*Im using coalesce here for the Longitude merge - this will trip me up in excercise 3. The PERIODIC COMMIT is  merging 1000(default) rows from the csv into the db*
+*Im using coalesce here for the Longitude merge - this will trip me up in excercise 3. The PERIODIC COMMIT is  merging 1000(default) rows from the csv into the db*<br>
+<b>NB the above cipher will take several seconds depending on your hardware</b><br>
 
 # Excercise 2
 
