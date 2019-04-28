@@ -69,7 +69,8 @@ CREATE (b:tweeters {handle: handle})
 Added 22913 labels, created 22913 nodes, set 22913 properties, completed after 1480 ms.
 ```
 <br>
-*Create a relation "Tweeted" between Tweeters and Tweet.* <br>
+*Create a relation "Tweeted" between Tweeters and Tweet.* 
+<br>
 
 ```
 MATCH (b:tweeters), (a:tweet)
@@ -110,4 +111,4 @@ a.nickname		distance
 
 Started streaming 10 records after 199500 ms and completed after 199500 ms.
 ```
-**
+
