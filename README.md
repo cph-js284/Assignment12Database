@@ -45,8 +45,13 @@ CREATE (a:tweet{
                 | right(m,size(m)-1)))
                 })
 ```
-*Im using coalesce here for the Longitude merge - this will trip me up in excercise 3. The PERIODIC COMMIT is  merging 1000(default) rows from the csv into the db*<br>
+*The PERIODIC COMMIT is commiting 1000(default) rows from the csv into the db*<br>
 <b>NB the above cipher will take several seconds depending on your hardware</b><br>
+<br>
+<b>Result</b><br>
+```
+Added 136099 labels, created 136099 nodes, set 952681 properties, completed after 17933 ms.
+```
 
 # Excercise 2
 
