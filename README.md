@@ -5,7 +5,7 @@ This is the 12th. assignment for PBA database soft2019spring
 This is a repo containing a single markdown, that holds the answers for the [assignment 12](https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md) <br>
 
 # Setup
-1) Download the zip file and unpack the zip-file
+1) Download and unpack the zip-file
 ```
 wget https://github.com/datsoftlyngby/soft2019spring-databases/raw/master/data/some2016UKgeotweets.csv.zip
 unzip some2016UKgeotweets.csv.zip
