@@ -86,7 +86,7 @@ Created 81880 nodes, created 40940 relationships, completed after 6708501 ms.
 ```
 MATCH (a:tweet), (b:tweet) 
 WHERE a.username = b.username AND a <> b
-WITH distance(point({longitude:a.long, latitude:a.latt}), point({longitude:b.long, latitude:b.latt})) as dist, a, b
+WITH DISTANCE(POINT({longitude:a.long, latitude:a.latt}), POINT({longitude:b.long, latitude:b.latt})) as dist, a, b
 RETURN DISTINCT a.nickname, max(dist) as distance
 ORDER BY distance DESC
 LIMIT 10
